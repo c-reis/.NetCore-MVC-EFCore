@@ -19,6 +19,7 @@ namespace AppCardapio.Data
         public DbSet<CepCidadeModel> CepCidade { get; set; }
         public DbSet<ProdutoModel> Produto { get; set; }
         public DbSet<RestauranteModel> Restaurante { get; set; }
+        public DbSet<PedidoModel> Pedido { get; set; }
 
 
 
