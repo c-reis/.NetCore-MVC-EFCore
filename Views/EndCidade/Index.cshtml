@@ -16,16 +16,20 @@
                         <th scope="col">Código</th>
                         <th scope="col">Nome</th>
                         <th scope="col">CEP</th>
+                        <th scope="col">-</th>
+                        <th scope="col">-</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ((EndCidadeModel, CepCidadeModel) cidade in Model)
                     {
-                        <tr>
-                            <td>@cidade.Item1.Id_cidade</td>
-                            <td><a asp-action="Index" asp-controller="EndCidade" asp-route-Id="@cidade.Item1.Id_cidade">@cidade.Item1.Nome_Cidade</a></td>
-                            <td>@cidade.Item2.Numero_Cep</td>
-                        </tr>
+                    <tr>
+                        <td>@cidade.Item1.Id_cidade</td>
+                        <td>@cidade.Item1.Nome_Cidade</td>
+                        <td>@cidade.Item2.Numero_Cep</td>
+                        <td><a asp-action="Update" asp-controller="EndCidade" asp-route-IdCidade="@cidade.Item1.Id_cidade">Editar</a></td>
+                        <td><a asp-action="Delete" asp-controller="EndCidade" asp-route-IdCidade="@cidade.Item1.Id_cidade">Deletar</a></td>
+                    </tr>
                     }
                 </tbody>
 

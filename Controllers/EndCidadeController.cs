@@ -47,7 +47,9 @@ namespace AppCardapio.Controllers
         [HttpGet]
         public async Task<ActionResult> Update(int idCidade)
         {
-            return View(await _context.EndCidade.Where(c => c.Id_cidade == idCidade).FirstOrDefaultAsync());
+            return View(await _context.EndCidade.Where(c => c.Id_cidade == idCidade)
+                                                .Include(cep => cep.CepCidade)
+                                                .FirstOrDefaultAsync());
         }
 
         [HttpPost]

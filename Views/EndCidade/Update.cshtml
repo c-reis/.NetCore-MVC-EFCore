@@ -5,14 +5,12 @@
 
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nome da Cidade:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Nome_Cidade" required>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade"  asp-for="Nome_Cidade" value="@Model.Nome_Cidade" required>
     </div>
-    <select class="mb-3" asp-for="Cep_Id">
-        @foreach (dynamic viewbag in ViewBag.ListaCep)
-        {
-            <option value=@viewbag.Id_cep>@viewbag.Numero_Cep</option>
-        }
-    </select>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Número do CEP:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="CepCidade.Numero_Cep" value="@Model.CepCidade.Numero_Cep" required>
+    </div>
 
 
     <input class="btn btn-primary" type="submit" value="Salvar">
