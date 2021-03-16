@@ -20,9 +20,20 @@ namespace AppCardapio.Controllers
         [HttpGet]
         public async Task<ActionResult> Index()
         {
-            List<EndCidadeModel>listaCidades = new List<EndCidadeModel>();
-            listaCidades = await _context.EndCidade.AsNoTracking().ToListAsync();
-            return View(listaCidades);
+            IQueryable<(EndCidadeModel, CepCidadeModel)> query = from cidade in _context.EndCidade
+                                                                 join cep in _context.CepCidade on cidade.Cep_Id equals cep.Id_cep
+                                                                 select new ValueTuple<EndCidadeModel, CepCidadeModel>(cidade, cep);
+
+            List<(EndCidadeModel, CepCidadeModel)> listaCidade = await query.ToListAsync();
+
+            return View(listaCidade);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> Create()
+        {
+            ViewBag.ListaCep = await _context.CepCidade.AsNoTracking().ToListAsync();
+            return View();
         }
 
         [HttpPost]
@@ -39,12 +50,12 @@ namespace AppCardapio.Controllers
             return View(await _context.EndCidade.Where(c => c.Id_cidade == idCidade).FirstOrDefaultAsync());
         }
 
-        [HttpPatch]
+        [HttpPost]
         public async Task<ActionResult> Update(EndCidadeModel alteraCidade)
         {
             _context.Entry(alteraCidade).State = EntityState.Modified;
             await _context.SaveChangesAsync();
-            
+
             return View();
         }
 

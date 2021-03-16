@@ -1,0 +1,19 @@
+﻿@using AppCardapio.Models
+@model EndCidadeModel
+
+<form asp-controller="EndCidade" asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nome da Cidade:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Nome_Cidade" required>
+    </div>
+
+    <select class="mb-3" asp-for="Cep_Id">
+        @foreach (dynamic viewbag in ViewBag.ListaCep)
+        {
+            <option value=@viewbag.Id_cep>@viewbag.Numero_Cep</option>
+        }
+    </select>
+
+    <input class="btn btn-primary" type="submit" value="Salvar">
+</form>  

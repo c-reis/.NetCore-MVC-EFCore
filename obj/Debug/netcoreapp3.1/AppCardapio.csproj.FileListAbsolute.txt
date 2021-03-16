@@ -53,3 +53,6 @@ C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\AppCardapi
 C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\AppCardapio.genruntimeconfig.cache
 C:\Users\carlo\Documents\Projetos\AppCardapio\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\carlo\Documents\Projetos\AppCardapio\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\Razor\Views\EndCidade\Create.cshtml.g.cs
+C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\Razor\Views\EndCidade\Index.cshtml.g.cs
+C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\Razor\Views\EndCidade\Update.cshtml.g.cs
