@@ -61,11 +61,12 @@ namespace AppCardapio.Controllers
             return View();
         }
 
-        [HttpDelete]
+        [HttpGet]
         public async Task<ActionResult> Delete(int idCidade)
         {
             EndCidadeModel cidade = await _context.EndCidade.Where(c => c.Id_cidade == idCidade).FirstOrDefaultAsync();
             _context.EndCidade.Remove(cidade);
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
     }
