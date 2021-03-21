@@ -5,7 +5,7 @@
 
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nome da Cidade:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade"  asp-for="Nome_Cidade" value="@Model.Nome_Cidade" required>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Nome_Cidade" value="@Model.Nome_Cidade" required>
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Número do CEP:</label>
@@ -13,5 +13,6 @@
     </div>
 
 
-    <input class="btn btn-primary" type="submit" value="Salvar">
+    <button asp-action="Update" asp-controller="EndCidade" asp-route-IdCidade="Model.Id_cidade">Editar</button>
+    
 </form>
