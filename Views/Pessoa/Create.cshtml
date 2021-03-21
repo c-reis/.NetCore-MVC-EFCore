@@ -1,0 +1,32 @@
+﻿@using AppCardapio.Models
+@model PessoaModel
+
+<form asp-controller="Pessoa" asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nome completo:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Nome_Completo" required>
+        <label for="formGroupExampleInput" class="form-label">Rua:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Endereco_Rua" required>
+        <label for="formGroupExampleInput" class="form-label">Número da resiência:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Endereco_Numero" required>
+        <label for="formGroupExampleInput" class="form-label">Bairro:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Endereco_Bairro" required>
+        <label for="formGroupExampleInput" class="form-label">Cidade:</label>
+        <select class="mb-3" asp-for="Cidade_Id">
+            @foreach (dynamic viewbag in ViewBag.cidade)
+            {
+                <option value=@viewbag.Id_cidade>@viewbag.Nome_Cidade</option>
+            }
+        </select>
+        <br>
+        <label for="formGroupExampleInput" class="form-label">Telefone1:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Telefone1" required>
+        <label for="formGroupExampleInput" class="form-label">Telefone2:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da cidade" asp-for="Telefone2" required>
+    </div>
+
+    
+
+    <input class="btn btn-primary" type="submit" value="Salvar">
+</form>

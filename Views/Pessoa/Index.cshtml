@@ -1,7 +1,7 @@
 ﻿@using AppCardapio.Models
 @model List<PessoaModel>
 <div>
-    <a class="btn btn-primary" asp-action="Create" asp-controller="EndCidade">Adicionar Cidade</a>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="Pessoa">Nova Pessoa</a>
 </div>
 <div class="card mb-3">
     <div class="card-header">
@@ -27,8 +27,8 @@
                             <td>@pe.Nome_Completo</td>
                             <td>@pe.Telefone1</td>
                             <td>
-                                <a asp-action="Update" asp-controller="Pessoa" asp-route-IdCidade="@pe.Id_pessoa">Editar</a>
-                                <a asp-action="Delete" asp-controller="Pessoa" asp-route-IdCidade="@pe.Id_pessoa">Deletar</a>
+                                <a asp-action="Update" asp-controller="Pessoa" asp-route-IdPessoa="@pe.Id_pessoa">Editar</a>
+                                <a asp-action="Delete" asp-controller="Pessoa" asp-route-IdPessoa="@pe.Id_pessoa">Deletar</a>
                             </td>
                         </tr>
                     }

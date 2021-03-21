@@ -56,3 +56,5 @@ C:\Users\carlo\Documents\Projetos\AppCardapio\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\Razor\Views\EndCidade\Create.cshtml.g.cs
 C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\Razor\Views\EndCidade\Index.cshtml.g.cs
 C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\Razor\Views\EndCidade\Update.cshtml.g.cs
+C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\Razor\Views\Pessoa\Create.cshtml.g.cs
+C:\Users\carlo\Documents\Projetos\AppCardapio\obj\Debug\netcoreapp3.1\Razor\Views\Pessoa\Index.cshtml.g.cs
